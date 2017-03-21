@@ -1,0 +1,3 @@
+rootProject.name = 'carp2'
+
+include ':app'
