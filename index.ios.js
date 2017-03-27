@@ -3,11 +3,13 @@ import {
   AppRegistry,
 } from 'react-native';
 
+import SetPrefs from './includes/views/setPreference';
+
 class Initial extends Component {
   constructor(props){
     super(props);
-    
+
   }
 }
 
-AppRegistry.registerComponent('carp2', () => carp2);
+AppRegistry.registerComponent('carp2', () => SetPrefs);
