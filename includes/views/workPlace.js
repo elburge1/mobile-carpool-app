@@ -19,12 +19,19 @@ const styles = StyleSheet.create({
   },
 })
 
-render () {
-  return (
-    <View>
+class WorkPlace extends Component {
+  constructor(props, context){
+    super(props, context);
 
-    </View>
-  )
+  }
+
+  render () {
+    return (
+      <View style={styles.container}>
+        <Text>This is the workplace page</Text>
+      </View>
+    )
+  }
 }
 
 export default WorkPlace;
