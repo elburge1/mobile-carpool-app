@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     margin: 10,
     alignSelf: 'center',
+    marginTop: 35,
   },
   subtitle: {
     alignSelf: 'center',
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
   button: {
     height: 45,
     alignSelf: 'stretch',
-    backgroundColor: 'yellow',
+    backgroundColor: '#41f444',
     marginTop: 10,
     marginLeft: 15,
     marginRight: 15,
