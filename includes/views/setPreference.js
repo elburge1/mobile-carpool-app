@@ -13,6 +13,14 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     paddingTop: 10,
   },
+  title: {
+    fontSize: 24,
+    margin: 10,
+    alignSelf: 'center',
+  },
+  subtitle: {
+
+  },
   input: {
     height: 50,
     padding: 10,
@@ -57,7 +65,8 @@ class SetPrefs extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Welcome to Carp! What's your email and where you at?</Text>
+        <Text style={styles.title}>Welcome to Carp!</Text>
+        <Text style={styles.subtitle}>What's your email and where you at?</Text>
         <TextInput
           onChangeText={this.onChangeEmail.bind(this)}
           required={true}
