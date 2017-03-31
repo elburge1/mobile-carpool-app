@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-start',
     paddingTop: 10,
+    backgroundColor: '#05A5D1',
   },
   title: {
     fontSize: 24,
@@ -19,7 +20,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   subtitle: {
-
+    alignSelf: 'center',
+    fontSize: 16,
+    textDecorationLine: 'underline',
   },
   input: {
     height: 50,
@@ -31,12 +34,13 @@ const styles = StyleSheet.create({
   button: {
     height: 45,
     alignSelf: 'stretch',
-    backgroundColor: '#05A5D1',
+    backgroundColor: 'yellow',
     marginTop: 10,
-    marginLeft: 10,
-    marginRight: 10,
+    marginLeft: 15,
+    marginRight: 15,
     alignItems: 'center',
     justifyContent: 'center',
+    borderRadius: 5,
   },
 })
 
