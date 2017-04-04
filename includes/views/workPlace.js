@@ -17,6 +17,10 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     backgroundColor: '#05A5D1',
   },
+  header: {
+    alignSelf: 'center',
+    textDecorationLine: 'underline',
+  },
 })
 
 class WorkPlace extends Component {
@@ -28,7 +32,7 @@ class WorkPlace extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <Text>This is the workplace page</Text>
+        <Text style={styles.header}>This is the workplace page</Text>
         <Picker>
           <Item label="pick one"/>
           <Item label="morning person" value="talkative"/>
