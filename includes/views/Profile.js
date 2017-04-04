@@ -5,10 +5,7 @@ import {
   TouchableHighlight,
   StyleSheet,
   TextInput,
-  Picker,
 } from 'react-native';
-
-const Item = Picker.Item;
 
 const styles = StyleSheet.create({
   container: {
@@ -54,13 +51,28 @@ class Profile extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <Text style={styles.header}>This is the workplace page</Text>
-        <Picker>
-          <Item label="pick one"/>
-          <Item label="morning person" value="talkative"/>
-          <Item label="I'll talk after I have coffee" value="might talk"/>
-          <Item label="I'm just here so I don't get fined" value="nope"/>
-        </Picker>
+        <Text style={styles.header}>Profile</Text>
+        <TextInput
+          onChangeText={this.onChangeCity.bind(this)}
+          required={true}
+          placeholder="What city are you in?"
+          style={styles.input}
+          >
+        </TextInput>
+        <TextInput
+          onChangeText={this.onChangeCity.bind(this)}
+          required={true}
+          placeholder="What city are you in?"
+          style={styles.input}
+          >
+        </TextInput>
+        <TextInput
+          onChangeText={this.onChangeCity.bind(this)}
+          required={true}
+          placeholder="What city are you in?"
+          style={styles.input}
+          >
+        </TextInput>
         <TouchableHighlight
           onPress={this.onSubmitPressed.bind(this)}
           style={styles.button}
