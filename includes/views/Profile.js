@@ -31,6 +31,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 5,
   },
+  input: {
+    height: 50,
+    padding: 10,
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 10,
+  },
 })
 
 class Profile extends Component {
@@ -41,7 +48,16 @@ class Profile extends Component {
       coffee: '',
 
     }
+  }
 
+  onChangeName(text) {
+    this.state.name = text;
+    this.setState(this.state)
+  }
+
+  onChangeCoffee(text) {
+    this.state.coffee = text;
+    this.setState(this.state)
   }
 
   onSubmitPressed() {
@@ -53,23 +69,16 @@ class Profile extends Component {
       <View style={styles.container}>
         <Text style={styles.header}>Profile</Text>
         <TextInput
-          onChangeText={this.onChangeCity.bind(this)}
+          onChangeText={this.onChangeName.bind(this)}
           required={true}
-          placeholder="What city are you in?"
+          placeholder="What would you like people to call you?"
           style={styles.input}
           >
         </TextInput>
         <TextInput
-          onChangeText={this.onChangeCity.bind(this)}
+          onChangeText={this.onChangeCoffee.bind(this)}
           required={true}
-          placeholder="What city are you in?"
-          style={styles.input}
-          >
-        </TextInput>
-        <TextInput
-          onChangeText={this.onChangeCity.bind(this)}
-          required={true}
-          placeholder="What city are you in?"
+          placeholder="Want a beverage for the ride?"
           style={styles.input}
           >
         </TextInput>
