@@ -4,7 +4,7 @@ import {
 } from 'react-native';
 
 import SetPrefs from './includes/views/setPreference';
-import WorkPlace from './includes/views/workPlace';
+import Profile from './includes/views/workPlace';
 
 class Initial extends Component {
   constructor(props){
@@ -13,4 +13,4 @@ class Initial extends Component {
   }
 }
 
-AppRegistry.registerComponent('carp2', () => WorkPlace);
+AppRegistry.registerComponent('carp2', () => Profile);

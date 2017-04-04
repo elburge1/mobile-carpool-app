@@ -36,10 +36,19 @@ const styles = StyleSheet.create({
   },
 })
 
-class WorkPlace extends Component {
+class Profile extends Component {
   constructor(props, context){
     super(props, context);
+    this.state = {
+      name: '',
+      coffee: '',
 
+    }
+
+  }
+
+  onSubmitPressed() {
+    console.log(this.state)
   }
 
   render () {
@@ -63,4 +72,4 @@ class WorkPlace extends Component {
   }
 }
 
-export default WorkPlace;
+export default Profile;
