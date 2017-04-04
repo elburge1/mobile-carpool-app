@@ -20,6 +20,19 @@ const styles = StyleSheet.create({
   header: {
     alignSelf: 'center',
     textDecorationLine: 'underline',
+    fontSize: 20,
+    marginTop: 20,
+  },
+  button: {
+    height: 45,
+    alignSelf: 'stretch',
+    backgroundColor: '#41f444',
+    marginTop: 10,
+    marginLeft: 15,
+    marginRight: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 5,
   },
 })
 
@@ -39,6 +52,12 @@ class WorkPlace extends Component {
           <Item label="I'll talk after I have coffee" value="might talk"/>
           <Item label="I'm just here so I don't get fined" value="nope"/>
         </Picker>
+        <TouchableHighlight
+          onPress={this.onSubmitPressed.bind(this)}
+          style={styles.button}
+          >
+          <Text>Submit</Text>
+        </TouchableHighlight>
       </View>
     )
   }
