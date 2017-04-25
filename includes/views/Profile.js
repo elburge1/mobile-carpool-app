@@ -48,7 +48,7 @@ class Profile extends Component {
     super(props, context);
     this.state = {
       name: '',
-      coffee: '',
+      driver: '',
 
     }
   }
@@ -78,7 +78,8 @@ class Profile extends Component {
           style={styles.input}
           >
         </TextInput>
-
+        <Picker
+          onValueChange={this.onValueChange.bind(this)}
 
         <TouchableHighlight
           onPress={this.onSubmitPressed.bind(this)}
