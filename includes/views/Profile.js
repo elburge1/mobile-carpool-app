@@ -58,9 +58,9 @@ class Profile extends Component {
     this.setState(this.state)
   }
 
-  onChangeCoffee(text) {
-    this.state.coffee = text;
-    this.setState(this.state)
+  onValueChange(value: string, key: string){
+    this.state.driver = value;
+    this.setState(this.state);
   }
 
   onSubmitPressed() {
@@ -80,7 +80,7 @@ class Profile extends Component {
         </TextInput>
         <Picker
           onValueChange={this.onValueChange.bind(this)}
-
+          
         <TouchableHighlight
           onPress={this.onSubmitPressed.bind(this)}
           style={styles.button}
