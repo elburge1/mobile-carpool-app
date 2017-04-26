@@ -80,7 +80,13 @@ class Profile extends Component {
         </TextInput>
         <Picker
           onValueChange={this.onValueChange.bind(this)}
-          
+          mode={Picker.MODE_DROPDOWN}
+          selectedValue={this.state.driver}
+          >
+            <Item label="Rider" value="rider"/>
+            <Item label="Driver" value="driver" />
+            <Item label="Both" value="both" />
+          </Picker>
         <TouchableHighlight
           onPress={this.onSubmitPressed.bind(this)}
           style={styles.button}
