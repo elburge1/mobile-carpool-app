@@ -41,6 +41,12 @@ const styles = StyleSheet.create({
     marginRight: 10,
     marginTop: 10,
   },
+  driver: {
+    marginTop: 20,
+  },
+  picker: {
+    height: 150,
+  },
 })
 
 class Profile extends Component {
@@ -78,9 +84,11 @@ class Profile extends Component {
           style={styles.input}
           >
         </TextInput>
+        <Text style={styles.driver}>Are you a rider or driver?</Text>
         <Picker
           onValueChange={this.onValueChange.bind(this)}
           mode={Picker.MODE_DROPDOWN}
+          style={styles.picker}
           selectedValue={this.state.driver}
           >
             <Item label="Rider" value="rider"/>
