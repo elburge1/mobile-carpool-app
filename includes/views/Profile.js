@@ -84,17 +84,19 @@ class Profile extends Component {
           style={styles.input}
           >
         </TextInput>
-        <Text style={styles.driver}>Are you a rider or driver?</Text>
-        <Picker
-          onValueChange={this.onValueChange.bind(this)}
-          mode={Picker.MODE_DROPDOWN}
-          style={styles.picker}
-          selectedValue={this.state.driver}
-          >
-            <Item label="Rider" value="rider"/>
-            <Item label="Driver" value="driver" />
-            <Item label="Both" value="both" />
-          </Picker>
+        <View>
+          <Text style={styles.driver}>Are you a rider or driver?</Text>
+          <Picker
+            onValueChange={this.onValueChange.bind(this)}
+            mode={Picker.MODE_DROPDOWN}
+            style={styles.picker}
+            selectedValue={this.state.driver}
+            >
+              <Item label="Rider" value="rider"/>
+              <Item label="Driver" value="driver" />
+              <Item label="Both" value="both" />
+            </Picker>
+        </View>
         <TouchableHighlight
           onPress={this.onSubmitPressed.bind(this)}
           style={styles.button}
