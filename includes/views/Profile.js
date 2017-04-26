@@ -55,13 +55,18 @@ class Profile extends Component {
     this.state = {
       name: '',
       driver: '',
-
+      car: '',
     }
   }
 
   onChangeName(text) {
     this.state.name = text;
     this.setState(this.state)
+  }
+
+  onChangeCarMake(text){
+    this.state.car = text;
+    this.setState(this.state);
   }
 
   onValueChange(value: string, key: string){
@@ -71,6 +76,19 @@ class Profile extends Component {
 
   onSubmitPressed() {
     console.log(this.state)
+  }
+
+  driver(){
+    (this.driver === "driver" || this.driver === "both") ?
+        <View>
+        <TextInput
+          placeholder="What kind of car do you drive?"
+          onChangeText={this.onChangeCarMake.bind(this)}
+          >
+        </TextInput>
+      </View>
+      :
+      null;
   }
 
   render () {
@@ -97,6 +115,7 @@ class Profile extends Component {
               <Item label="Both" value="both" />
             </Picker>
         </View>
+        {this.driver.bind(this)}
         <TouchableHighlight
           onPress={this.onSubmitPressed.bind(this)}
           style={styles.button}
