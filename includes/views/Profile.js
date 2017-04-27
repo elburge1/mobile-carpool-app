@@ -57,6 +57,7 @@ class Profile extends Component {
       driver: '',
       car: '',
     }
+    this.driver = this.driver.bind(this);
   }
 
   onChangeName(text) {
@@ -72,6 +73,7 @@ class Profile extends Component {
   onValueChange(value: string, key: string){
     this.state.driver = value;
     this.setState(this.state);
+    this.driver()
   }
 
   onSubmitPressed() {
@@ -115,7 +117,7 @@ class Profile extends Component {
               <Item label="Both" value="both" />
             </Picker>
         </View>
-        {this.driver.bind(this)}
+        {driver}
         <TouchableHighlight
           onPress={this.onSubmitPressed.bind(this)}
           style={styles.button}
