@@ -73,7 +73,6 @@ class Profile extends Component {
   onValueChange(value: string, key: string){
     this.state.driver = value;
     this.setState(this.state);
-    this.driver()
   }
 
   onSubmitPressed() {
@@ -81,7 +80,7 @@ class Profile extends Component {
   }
 
   driver(){
-    (this.driver === "driver" || this.driver === "both") ?
+    (this.state.driver === "driver" || this.state.driver === "both") ?
         <View>
         <TextInput
           placeholder="What kind of car do you drive?"
@@ -117,7 +116,7 @@ class Profile extends Component {
               <Item label="Both" value="both" />
             </Picker>
         </View>
-        {driver}
+        {this.driver()}
         <TouchableHighlight
           onPress={this.onSubmitPressed.bind(this)}
           style={styles.button}
