@@ -42,10 +42,11 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   driver: {
-    marginTop: 20,
+    // marginTop: 20,
   },
   picker: {
-    height: 150,
+    // height: 150,
+    margin: 10,
   },
 })
 
@@ -103,8 +104,8 @@ class Profile extends Component {
             </Picker>
         </View>
         <TextInput
-          onChangeText={this.onCarChangeMake.bind(this)}
-          editable={this.state.driver}
+          onChangeText={this.onChangeCarMake.bind(this)}
+          editable={this.state.driver === 'driver' || this.state.driver === 'both'}
           placeholder="What kind of car do you have?"
           style={styles.input}
           >
