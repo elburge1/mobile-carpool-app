@@ -56,7 +56,11 @@ class Profile extends Component {
     this.state = {
       name: '',
       driver: '',
-      car: '',
+      car: {
+        make: '',
+        model: '',
+        color: '',
+      },
     }
   }
 
@@ -66,7 +70,17 @@ class Profile extends Component {
   }
 
   onChangeCarMake(text){
-    this.state.car = text;
+    this.state.car.make = text;
+    this.setState(this.state);
+  }
+
+  onChangeCarModel(text){
+    this.state.car.model = text;
+    this.setState(this.state);
+  }
+
+  onChangeCarColor(text){
+    this.state.car.color = text;
     this.setState(this.state);
   }
 
@@ -91,7 +105,6 @@ class Profile extends Component {
           >
         </TextInput>
         <View>
-          <Text style={styles.driver}>Are you a rider or driver?</Text>
           <Picker
             onValueChange={this.onValueChange.bind(this)}
             mode={Picker.MODE_DROPDOWN}
@@ -106,10 +119,24 @@ class Profile extends Component {
         <TextInput
           onChangeText={this.onChangeCarMake.bind(this)}
           editable={this.state.driver === 'driver' || this.state.driver === 'both'}
-          placeholder="What kind of car do you have?"
+          placeholder="What make is your car?"
           style={styles.input}
           >
           </TextInput>
+          <TextInput
+            onChangeText={this.onChangeCarModel.bind(this)}
+            editable={this.state.driver === 'driver' || this.state.driver === 'both'}
+            placeholder="What model is the car?"
+            style={styles.input}
+            >
+            </TextInput>
+            <TextInput
+              onChangeText={this.onChangeCarColor.bind(this)}
+              editable={this.state.driver === 'driver' || this.state.driver === 'both'}
+              placeholder="What color is the car?"
+              style={styles.input}
+              >
+              </TextInput>
         <TouchableHighlight
           onPress={this.onSubmitPressed.bind(this)}
           style={styles.button}
