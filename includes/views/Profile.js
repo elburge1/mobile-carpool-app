@@ -10,13 +10,6 @@ import {
 
 const Item = Picker.Item;
 
-let manda = 'bae';
-
-for (let i = 0; i< 10; i++){
-  console.log(manda + " " + i);
-  let manda = i;
-}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
