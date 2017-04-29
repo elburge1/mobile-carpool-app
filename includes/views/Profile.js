@@ -57,7 +57,6 @@ class Profile extends Component {
       driver: '',
       car: '',
     }
-    this.driver = this.driver.bind(this);
   }
 
   onChangeName(text) {
@@ -77,19 +76,6 @@ class Profile extends Component {
 
   onSubmitPressed() {
     console.log(this.state)
-  }
-
-  driver(){
-    (this.state.driver === "driver" || this.state.driver === "both") ?
-        <View>
-        <TextInput
-          placeholder="What kind of car do you drive?"
-          onChangeText={this.onChangeCarMake.bind(this)}
-          >
-        </TextInput>
-      </View>
-      :
-      null;
   }
 
   render () {
@@ -116,7 +102,6 @@ class Profile extends Component {
               <Item label="Both" value="both" />
             </Picker>
         </View>
-        {this.driver()}
         <TouchableHighlight
           onPress={this.onSubmitPressed.bind(this)}
           style={styles.button}
