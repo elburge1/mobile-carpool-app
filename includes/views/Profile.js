@@ -102,6 +102,13 @@ class Profile extends Component {
               <Item label="Both" value="both" />
             </Picker>
         </View>
+        <TextInput
+          onChangeText={this.onCarChangeMake.bind(this)}
+          editable={this.state.driver}
+          placeholder="What kind of car do you have?"
+          style={styles.input}
+          >
+          </TextInput>
         <TouchableHighlight
           onPress={this.onSubmitPressed.bind(this)}
           style={styles.button}
