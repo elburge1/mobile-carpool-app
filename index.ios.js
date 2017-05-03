@@ -5,6 +5,7 @@ import {
 
 import SetPrefs from './includes/views/SetPreference';
 import Profile from './includes/views/Profile';
+import RouteMap from './includes/views/RouteMap';
 
 class Initial extends Component {
   constructor(props){
@@ -13,4 +14,4 @@ class Initial extends Component {
   }
 }
 
-AppRegistry.registerComponent('carp2', () => Profile);
+AppRegistry.registerComponent('carp2', () => RouteMap);

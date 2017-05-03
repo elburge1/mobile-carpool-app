@@ -23,7 +23,19 @@ const styles = StyleSheet.create({
 
 class RouteMap extends Component {
   render(){
-    
+    return (
+      <View>
+        <MapView
+          ref="map"
+          initialRegion={{
+            latitude: LATITUDE,
+            longitude: LONGITUDE,
+            latitudeDelta: LATITUDE_DELTA,
+            longitudeDelta: LONGITUDE_DELTA,
+          }}
+        </MapView>
+      </View>
+    )
   }
 }
 
