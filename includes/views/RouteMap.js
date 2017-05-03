@@ -32,7 +32,7 @@ class RouteMap extends Component {
             longitude: LONGITUDE,
             latitudeDelta: LATITUDE_DELTA,
             longitudeDelta: LONGITUDE_DELTA,
-          }}
+          }}>
         </MapView>
       </View>
     )
