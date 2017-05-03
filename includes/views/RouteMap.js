@@ -10,8 +10,8 @@ const styles = StyleSheet.create({
 
 })
 
-class MapView extends Component {
+class RouteMap extends Component {
 
 }
 
-export default MapView;
+export default RouteMap;
