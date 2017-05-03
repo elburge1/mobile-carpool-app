@@ -11,5 +11,7 @@ const styles = StyleSheet.create({
 })
 
 class MapView extends Component {
-  
+
 }
+
+export default MapView;
