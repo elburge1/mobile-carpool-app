@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
-import MapView from 'react-native-maps';
 import {
   View,
   Text,
   TouchableHighlight,
   StyleSheet,
   Dimensions,
+  ScrollView,
 } from 'react-native';
+import MapView from 'react-native-maps';
 
 const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
+  container:{
+
+  },
   map:{
-    height: 350,
-    width: 400,
-  }
+
+  },
 })
 
 const ASPECT_RATIO = width / height;
@@ -39,7 +42,7 @@ class RouteMap extends Component {
   }
   render() {
     return (
-      <View>
+      <View style={styles.container}>
         <MapView
           ref="map"
           style={styles.map}

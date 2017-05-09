@@ -7,7 +7,6 @@ import {
   TextInput,
   Picker,
 } from 'react-native';
-import RouteMap from './RouteMap'
 
 const Item = Picker.Item;
 
