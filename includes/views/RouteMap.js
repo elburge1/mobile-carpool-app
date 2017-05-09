@@ -17,10 +17,6 @@ const LATITUDE_DELTA = 0.0922;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 const SPACE = 0.01;
 
-const styles = StyleSheet.create({
-
-})
-
 class RouteMap extends Component {
   render(){
     return (
@@ -32,8 +28,7 @@ class RouteMap extends Component {
             longitude: LONGITUDE,
             latitudeDelta: LATITUDE_DELTA,
             longitudeDelta: LONGITUDE_DELTA,
-          }}>
-        </MapView>
+          }}/>
       </View>
     )
   }
