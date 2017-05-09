@@ -8,7 +8,14 @@ import {
   Dimensions,
 } from 'react-native';
 
-var { width, height } = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
+
+const styles = StyleSheet.create({
+  map:{
+    height: 350,
+    width: 400,
+  }
+})
 
 const ASPECT_RATIO = width / height;
 const LATITUDE = 47.6253;
@@ -18,17 +25,19 @@ const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 const SPACE = 0.01;
 
 class RouteMap extends Component {
-  render(){
+  render() {
     return (
       <View>
         <MapView
           ref="map"
+          style={styles.map}
           initialRegion={{
             latitude: LATITUDE,
             longitude: LONGITUDE,
             latitudeDelta: LATITUDE_DELTA,
             longitudeDelta: LONGITUDE_DELTA,
-          }}/>
+          }}
+        />
       </View>
     )
   }

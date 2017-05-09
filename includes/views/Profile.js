@@ -144,7 +144,6 @@ class Profile extends Component {
           >
           <Text>Submit</Text>
         </TouchableHighlight>
-        <RouteMap />
       </View>
     )
   }
