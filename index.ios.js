@@ -15,4 +15,4 @@ class Initial extends Component {
   }
 }
 
-AppRegistry.registerComponent('carp2', () => RouteMap);
+AppRegistry.registerComponent('carp2', () => Profile);
